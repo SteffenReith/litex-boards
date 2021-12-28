@@ -10,7 +10,7 @@ setup(
     author="Florent Kermarrec",
     author_email="florent@enjoy-digital.fr",
     url="http://enjoy-digital.fr",
-    download_url="https://github.com/litex-hub/litex-boards",
+    download_url="https://github.com/SteffenReith/litex-boards.git",
     test_suite="test",
     license="BSD",
     python_requires="~=3.6",

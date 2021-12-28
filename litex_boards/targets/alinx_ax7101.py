@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 import os
 import argparse
+
 from migen import *
 
 from litex_boards.platforms import alinx_ax7101
