@@ -12,10 +12,14 @@ from litex.build.openocd import OpenOCD
 
 _io = [
     # Clk / Rst
-    ("clk200_p", 0, Pins("R4"), IOStandard("SSTL15")),
-    ("clk200_n", 0, Pins("T4"), IOStandard("DIFF_SSTL15")),
-    ("clk125_p", 0, Pins("F6"), IOStandard("DIFF_SSTL15")),
-    ("clk125_n", 0, Pins("E6"), IOStandard("DIFF_SSTL15")),
+    ("clk200", 0,
+        Subsignal("p", Pins("R4"), IOStandard("DIFF_SSTL15")),
+        Subsignal("n", Pins("T4"), IOStandard("DIFF_SSTL15")),
+    ),
+    ("clk156", 0,
+        Subsignal("p", Pins("F6"), IOStandard("DIFF_SSTL15")),
+        Subsignal("n", Pins("E6"), IOStandard("DIFF_SSTL15")),
+    ),
     ("cpu_reset", 0, Pins("T6"), IOStandard("SSTL15")),
 
     # DDR3 SDRAM
